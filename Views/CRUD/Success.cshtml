@@ -1,0 +1,15 @@
+﻿@model RecipeSite.Models.Recipe
+
+@{
+    ViewData["Title"] = "Recipe Added";
+}
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <div class="container">
+
+
+        <h3>Recipe<a asp-controller="Recipes" asp-action="ViewRecipe" asp-route-id="@Model.Id" class="btn btn-lg">@Model.Name</a>Added!</h3>
+        
+        <div class="bottom-three"></div>
+        <a class="btn btn-danger" asp-controller="Recipes" asp-action="RecipeList">Back to List</a>
+
+    </div>

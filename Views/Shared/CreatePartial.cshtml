@@ -1,0 +1,78 @@
+﻿@model RecipeSite.Models.Recipe;
+
+<h4>Recipe</h4>
+
+
+
+<div class="center-div">
+    <p>
+        @if (Model != null)
+        {
+            <h1>Edit Your Recipe</h1>
+        }
+        else
+        {
+            <h1>Create Your Recipe</h1>
+        }
+
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="CRUD" asp-action="AddRecipe" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            @if (Model != null)
+            {
+                <input type="hidden" asp-for="Id" value="@Model.Id" />
+            }
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <Label asp-for="Cuisine" class="control-label"></Label>
+                <select asp-for="Cuisine">
+                    <option value="1">French</option>
+                    <option value="2">American</option>
+                    <option value="3">Italian</option>
+                    <option value="4">Japanese</option>
+                    <option value="5">Chinese</option>
+                    <option value="6">Brazilian</option>
+                </select>
+                <span asp-validation-for="Cuisine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preparation" class="control-label"></label>
+                <input asp-for="Preparation" class="form-control" />
+                <span asp-validation-for="Preparation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredients" class="control-label"></label>
+                <input asp-for="Ingredients" class="form-control" />
+                <span asp-validation-for="Ingredients" class="text-danger"></span>
+            </div>
+
+            @if (Model != null)
+            {
+                <button class="btn btn-primary" type="submit">Update</button>
+                <button asp-controller="CRUD" asp-action="DeleteRecipe" method="post" class="btn btn-danger">Delete</button>
+                
+            }
+            else
+            {
+                <button class="btn btn-success" type="submit">Create</button>
+                <a class="btn btn-danger" asp-controller="Home" asp-action="index">Cancel</a>
+            }
+            
+            </form>
+            <div>
+                <a class="btn btn-warning"asp-controller="Recipes" asp-action="RecipeList">To List</a>
+
+            </div>
+        </div>
+    </div>
+
+

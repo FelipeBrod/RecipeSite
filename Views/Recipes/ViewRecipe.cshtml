@@ -1,0 +1,42 @@
+﻿@model RecipeSite.Models.Recipe
+
+@{
+    ViewData["Title"] = "ViewRecipe";
+}
+<h2>@ViewData["Title"]</h2>
+<hr />
+<div>
+    <dl class="container">
+
+
+        <dd>
+            <h4>How to do:&nbsp; @Model.Name</h4>
+        </dd>
+        
+        <dd>What you need:
+
+        <dt>
+            @Model.Ingredients
+        </dt>
+        <dd>The original cuisine:
+        <dd>
+        <dt>
+            @Model.Cuisine
+        </dt>
+        <dd>How to do It:
+        <dd>
+        <dt>
+            @Model.Preparation
+        </dt>
+    </dl>
+</div>
+<div>
+   
+
+    <a asp-controller="CRUD" asp-action="UpdateRecipe" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    
+    @*<a asp-controller="Recipes" asp-action="ReviewRecipe" class="btn btn-default">Review It!</a>*@
+    <a class="btn btn-default" asp-action="RecipeList">Back to List</a>
+</div>
+
+

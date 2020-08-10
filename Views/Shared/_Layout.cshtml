@@ -1,0 +1,54 @@
+﻿<!DOCTYPE>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Your Recipe Web Site!</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="BackGround1"></div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"> <img src="~/img/d09002b6a1bcb269387fe31cecb7c8da.png" width="75" height="75" /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Recipes" asp-action="RecipeList">Recipes</a></li>
+                    <li><a asp-area="" asp-controller="CRUD" asp-action="AddRecipe">Create a Recipe</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <p class="bottom-three">&nbsp;</p>
+
+    <div class="container body-content">
+
+        @if (TempData["message"] != null)
+        {
+            <div class="alert alert-warning mt-1">@TempData["message"]</div>
+        }
+
+        @RenderBody()
+
+        <footer>
+            <hr />
+            <p>&copy; 2020 - Felipe Rodrigues</p>
+        </footer>
+    </div>
+    
+
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

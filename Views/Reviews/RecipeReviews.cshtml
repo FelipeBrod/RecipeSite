@@ -1,0 +1,35 @@
+﻿@model RecipeSite.Models.Recipe
+
+@{
+    ViewData["Title"] = "Recipe Reviews";
+}
+
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<div>
+    <dl class="container">
+
+        <dd>
+            <a asp-controller="Recipes" asp-action="ReviewRecipe" class="btn btn-warning">Review it yourself!</a>
+        </dd>
+
+        <dd>
+            What Most people think about:<a asp-controller="Recipes" asp-action="ViewRecipe" asp-route-id="@Model.Id" class="btn btn-link">@Model.Name</a>
+            
+            <p>
+                
+            </p>
+
+            <p>
+                <h5>Very good, but you should use less Salt</h5>
+            </p>
+        </dd>
+    </dl>
+</div>
+
+<div>
+    @*// <a asp-controller="Recipes" asp-action="ReviewRecipe" asp-route-id="@Model.Id" class="btn btn-default">Edit</a*@
+
+    <a class="btn btn-success" asp-action="RecipeList">Back to List</a>
+</div>
