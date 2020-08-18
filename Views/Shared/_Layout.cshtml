@@ -12,17 +12,24 @@
 <body>
     <div id="BackGround1"></div>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container row">
             <div class="navbar-header">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index"> <img src="~/img/d09002b6a1bcb269387fe31cecb7c8da.png" width="75" height="75" /></a>
+                <a class="navbar-brand " asp-controller="Home" asp-action="Index"> <img src="~/img/d09002b6a1bcb269387fe31cecb7c8da.png" width="75" height="75" /></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Recipes" asp-action="RecipeList">Recipes</a></li>
                     <li><a asp-area="" asp-controller="CRUD" asp-action="AddRecipe">Create a Recipe</a></li>
+                    <li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-action="Logout" asp-controller="Account">Logout</a>
+                        }
+                                    </li>
                 </ul>
             </div>
+           
         </div>
     </nav>
 
@@ -41,7 +48,7 @@
 
         <footer>
             <hr />
-            <p>&copy; 2020 - Felipe Rodrigues</p>
+            <p>&copy; 2020 - Felipe Rodrigues, Samira Matin Era, Hossain Nahid, Ritesh Gupta</p>
         </footer>
     </div>
     

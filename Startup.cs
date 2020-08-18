@@ -10,6 +10,7 @@ using RecipeSite.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 
 namespace RecipeSite
 {
@@ -27,7 +28,16 @@ namespace RecipeSite
             string connection = Configuration["Data:SiteRecipes:ConnectionString"];
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connection));
-            
+
+            services.AddTransient<ICuisineRepository, EFCuisineRepository>();
+
+            string connect = Configuration["Data:SiteIdentity:ConnectionString"];
+            services.AddDbContext<AppIdentityDbContext>(options =>
+            options.UseSqlServer(connect));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppIdentityDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddTransient<IRecipeRepository, EFRecipeRepository>();
            
@@ -45,7 +55,7 @@ namespace RecipeSite
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
             app.UseStatusCodePages();
-
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -55,6 +65,7 @@ namespace RecipeSite
             });
 
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
 
         }
     }

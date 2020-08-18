@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RecipeSite.Models;
 using RecipeSite.Models.ViewModels;
 
 namespace RecipeSite.Controllers
 {
+    [Authorize]
     public class CRUDController : Controller
     {
-        private IRecipeRepository repository;
+        private readonly IRecipeRepository repository;
 
 
         public CRUDController(IRecipeRepository repo)
@@ -23,8 +25,10 @@ namespace RecipeSite.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 repository.SaveRecipe(recipe);
                 return View("Success", recipe);
+
             }
             else
             {
@@ -38,7 +42,7 @@ namespace RecipeSite.Controllers
         [HttpGet]
         public ViewResult UpdateRecipe(int id)
         {
-            Recipe recipe = repository.Recipes.Where(n => n.Id == id).FirstOrDefault();
+            Recipe recipe = repository.FindAllRecipes.Where(n => n.Id == id).FirstOrDefault();
            
             return View("AddRecipe", recipe);
         }

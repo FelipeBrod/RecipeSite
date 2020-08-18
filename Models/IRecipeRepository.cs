@@ -7,10 +7,13 @@ namespace RecipeSite.Models
 {
    public interface IRecipeRepository
     {        
-        IQueryable<Recipe> Recipes { get; }
+       List<Recipe> FindAllRecipes { get; }
+
+        Recipe FindById(int id);
 
         void SaveRecipe(Recipe recipe);
 
         Recipe DeleteRecipe(int id);
+
     }
 }

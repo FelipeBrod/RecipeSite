@@ -12,5 +12,7 @@ namespace RecipeSite.Models
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         
         public DbSet<Recipe> Recipes { get; set; } 
+
+        public DbSet<Cuisine> Cuisines { get; set; }
     }
 }

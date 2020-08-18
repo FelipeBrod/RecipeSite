@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tHApRhMI7Z1NFLOH+UC21K8Fcj9rCIVUitPOeBEtraerolvzvcyPGIk9syFjkV0zLdPHuXg2W7faCW3Td++XvA==",
+  "dgSpecHash": "6TQ+MgRpEU2s688lyF9nygmRqf1z45viqLn2IcBwBXwwausvMPmSx2U1HEPwEnP0m2Fqb3J6xhdaDcbB8/rpYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite\\RecipeSite.csproj",
+  "projectFilePath": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite-master\\RecipeSite-master\\RecipeSite.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",

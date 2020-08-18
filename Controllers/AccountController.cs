@@ -12,8 +12,8 @@ namespace RecipeSite.Controllers
     [Authorize]
     public class AccountController: Controller
     {
-        private UserManager<IdentityUser> userManager;
-        private SignInManager<IdentityUser> signInManager;
+        readonly private UserManager<IdentityUser> userManager;
+        readonly private SignInManager<IdentityUser> signInManager;
         public AccountController(UserManager<IdentityUser> userMgr,
             SignInManager<IdentityUser> signInMgr)
         {

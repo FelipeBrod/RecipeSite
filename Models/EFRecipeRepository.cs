@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,12 +10,18 @@ namespace RecipeSite.Models
     {
         private ApplicationDbContext context;
 
+        List<Recipe> IRecipeRepository.FindAllRecipes => context.Recipes.ToList();
 
         public EFRecipeRepository(ApplicationDbContext ctx)
         {
             context = ctx;
         }
-        public IQueryable<Recipe> Recipes => context.Recipes;
+
+        public Recipe FindById(int id)
+        {
+            return context.Recipes.Include(obj => obj.Cuisine).FirstOrDefault(obj => obj.Id == id);
+        }
+
 
         public void SaveRecipe(Recipe recipe)
         {

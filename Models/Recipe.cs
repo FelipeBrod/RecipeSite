@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using RecipeSite.Models.Enums;
+
 
 namespace RecipeSite.Models
 {
@@ -16,6 +16,8 @@ namespace RecipeSite.Models
 
         [Required(ErrorMessage = "Please enter the cuisine")]
         public Cuisine Cuisine { get; set; }
+
+        public int CuisineId {get; set; } 
 
         [Required(ErrorMessage = "Please enter the Instructions")]
         public string Preparation { get; set; }

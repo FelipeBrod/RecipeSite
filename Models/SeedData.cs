@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using RecipeSite.Models.Enums;
+
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Threading;
 
 namespace RecipeSite.Models
 {
@@ -13,58 +15,72 @@ namespace RecipeSite.Models
     {
         public static void EnsurePopulated(IApplicationBuilder app)
         {
+
+
             ApplicationDbContext context = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
 
-            context.Database.Migrate();
-            if (!context.Recipes.Any())
+
+
+            if (context.Recipes.Any() || context.Cuisines.Any())
             {
-                context.Recipes.AddRange(
+                return;
+            }
+
+            Cuisine Br = new Cuisine(1, "Brazilian");
+            Cuisine Cn = new Cuisine(2, "Chinese");
+            Cuisine Cd = new Cuisine(3, "Canadian");
+
+            context.Cuisines.AddRange(Br, Cn, Cd);
+
+            context.Recipes.AddRange(
                 new Recipe
                 {
                     Name = "FriedEgg",
                     Ingredients = "Egg, Salt, Butter",
-                    Cuisine = (Cuisine)1,
+                    Cuisine = Br,
                     Preparation = "fry it",
                 },
                 new Recipe
                 {
                     Name = "Scrambled Egg",
                     Ingredients = "Eggs, Salt, Butter",
-                    Cuisine = (Cuisine)2,
+                    Cuisine = Cn,
                     Preparation = "Put the butter on the pan, wait for it to melt and than put the egg",
                 },
                 new Recipe
                 {
                     Name = "Boilded Egss",
                     Ingredients = "Egg",
-                    Cuisine = (Cuisine)3,
+                    Cuisine = Cd,
                     Preparation = "Put the butter on the pan, wait for it to melt and than put the egg and salt."
                 },
-                new Recipe
-                {
-                    Name = "Boilded Egss",
-                    Ingredients = "Egg",
-                    Cuisine = (Cuisine)5,
-                    Preparation = "Put the butter on the pan, wait for it to melt and than put the egg and salt."
-                },
-                new Recipe
-                {
-                    Name = "Boilded Egss",
-                    Ingredients = "Egg",
-                    Cuisine = (Cuisine)6,
-                    Preparation = "Put the butter on the pan, wait for it to melt and than put the egg and salt."
-                },
-                new Recipe
-                {
-                    Name = "Boilded Egss",
-                    Ingredients = "Egg",
-                    Cuisine = (Cuisine)2,
-                    Preparation = "Put the butter on the pan, wait for it to melt and than put the egg and salt."
-                }
-                        ) ;
-                context.SaveChanges();
-            }
+                
+            new Recipe
+            {
+                Name = "Boilded Egss",
+                Ingredients = "Egg",
+                Cuisine = Br,
+                Preparation = "Put the butter on the pan, wait for it to melt and than put the egg and salt."
+            });
+            //new Recipe
+            //{
+            //    Name = "Boilded Egss",
+            //    Ingredients = "Egg",
+            //    Cuisine = br,
+            //    Preparation = "Put the butter on the pan, wait for it to melt and than put the egg and salt."
+            //},
+            //new Recipe
+            //{
+            //    Name = "Boilded Egss",
+            //    Ingredients = "Egg",
+            //    Cuisine = br,
+            //    Preparation = "Put the butter on the pan, wait for it to melt and than put the egg and salt."
+            //});
+
+            context.SaveChanges();
+
         }
     }
 }
+
 

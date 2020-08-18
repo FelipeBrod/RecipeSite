@@ -35,3 +35,80 @@ C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite\obj\Debug\netcoreapp2.1
 C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite\obj\Debug\netcoreapp2.1\Razor\Views\Reviews\RecipeReviews.cshtml.g.cs
 C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite\obj\Debug\netcoreapp2.1\Razor\Views\CRUD\DeletedRecipe.cshtml.g.cs
 C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite\obj\Debug\netcoreapp2.1\RecipeSite.csprojAssemblyReference.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.deps.json
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.runtimeconfig.json
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.runtimeconfig.dev.json
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.dll
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.pdb
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.Views.dll
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.Views.pdb
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.csprojAssemblyReference.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.csproj.CoreCompileInputs.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorAssemblyInfo.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorAssemblyInfo.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.AssemblyInfoInputs.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.AssemblyInfo.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.TagHelpers.input.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.TagHelpers.output.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorCoreGenerate.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\CRUD\AddRecipe.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\CRUD\DeletedRecipe.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\CRUD\Success.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\RecipeList.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\ViewRecipe.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Reviews\RecipeReviews.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Reviews\ReviewRecipe.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CreatePartial.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorTargetAssemblyInfo.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorTargetAssemblyInfo.cs
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.Views.pdb
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.dll
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.pdb
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.genruntimeconfig.cache
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.csproj.CopyComplete
+D:\Web Application\Project\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.deps.json
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.runtimeconfig.json
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.runtimeconfig.dev.json
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.dll
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.pdb
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.Views.dll
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\bin\Debug\netcoreapp2.1\RecipeSite.Views.pdb
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.AssemblyInfoInputs.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.AssemblyInfo.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorAssemblyInfo.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorAssemblyInfo.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.TagHelpers.input.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.TagHelpers.output.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorCoreGenerate.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\CRUD\AddRecipe.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\CRUD\DeletedRecipe.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\CRUD\Success.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\RecipeList.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\ViewRecipe.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Reviews\RecipeReviews.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Reviews\ReviewRecipe.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CreatePartial.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorTargetAssemblyInfo.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.RazorTargetAssemblyInfo.cs
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.Views.pdb
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.dll
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.pdb
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.genruntimeconfig.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.csproj.CopyComplete
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\RecipeSite.csprojAssemblyReference.cache
+C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite-master\RecipeSite-master\obj\Debug\netcoreapp2.1\Razor\Views\Cuisine\Edit.cshtml.g.cs
