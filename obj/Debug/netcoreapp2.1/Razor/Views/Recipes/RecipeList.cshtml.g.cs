@@ -62,7 +62,7 @@ using RecipeSite.Models.ViewModels;
             WriteLiteral("\n<p>\n    ");
             EndContext();
             BeginContext(37, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afbc9d701ab84c07b0aa10d7811a96bf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "441a6c35ced94d19ae071554e109afc7", async() => {
                 BeginContext(109, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -96,7 +96,7 @@ using RecipeSite.Models.ViewModels;
             WriteLiteral("<tr>\n    <td>\n        <h3>");
             EndContext();
             BeginContext(436, 111, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec3a0cd8949b4186aba8c44ccebdc817", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c76b32969274417bace9140b9b66b395", async() => {
                 BeginContext(534, 9, false);
 #line 27 "C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite\Views\Recipes\RecipeList.cshtml"
                                                                                                         Write(item.Name);
@@ -138,7 +138,7 @@ using RecipeSite.Models.ViewModels;
             WriteLiteral("</h3>\n    </td>\n    <td>\n        <h3>");
             EndContext();
             BeginContext(584, 111, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75b6601ad36449eb8814689c09eac3a7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b775c7f5b6844da0b72a417bf2e4ef15", async() => {
                 BeginContext(684, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -176,7 +176,7 @@ using RecipeSite.Models.ViewModels;
             WriteLiteral("</h3>\n    </td>\n    <td>\n        ");
             EndContext();
             BeginContext(728, 131, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06c7dabf754542268a089b3e9636411e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a1d3f63e61374f15921229159779a956", async() => {
                 BeginContext(838, 17, false);
 #line 33 "C:\Users\Felipe\Documents\Felipe\Game\COMP229\RecipeSite\Views\Recipes\RecipeList.cshtml"
                                                                                                                 Write(item.Cuisine.Name);

@@ -58,7 +58,7 @@ using RecipeSite.Models.ViewModels;
             WriteLiteral("\n\n<div class=\"container\">\n    <div class=\"row justify-content-md-center\">\n        <div class=\"col-xl-8\">\n            ");
             EndContext();
             BeginContext(192, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "422b1749409e411982e894fe54fb13fa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8f88da1308bd49e6ad1aaf8e30b5eb4c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -86,7 +86,7 @@ using RecipeSite.Models.ViewModels;
             WriteLiteral("    <div class=\"col-xl-8\">\n        ");
             EndContext();
             BeginContext(320, 33, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "755f9dcd588a47e382ef768e59337156", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "40bbfb1816384b9ab1f33ec241bab86b", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

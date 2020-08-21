@@ -58,15 +58,20 @@ namespace RecipeSite.Controllers
 
 
         [HttpPost]
-        public IActionResult DeleteRecipe(int id)
+        public IActionResult DeleteRecipe(Recipe recipe)
         {
-            Recipe deletedRecipe = repository.DeleteRecipe(id);
+            Recipe deletedRecipe = repository.FindById(recipe.Id);
 
             if (deletedRecipe != null)
             {
+                repository.DeleteRecipe(deletedRecipe.Id);
                 TempData["message"] = $"{deletedRecipe.Name} was deleted";
+                return RedirectToAction("RecipeList", "Recipes");
             }
-            return RedirectToAction("RecipeList", "Recipes");
+            else
+            {
+                return RedirectToAction("RecipeList", "Recipes");
+            }
         }
     }
 }

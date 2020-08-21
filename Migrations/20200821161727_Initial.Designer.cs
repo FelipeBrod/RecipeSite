@@ -9,8 +9,8 @@ using RecipeSite.Models;
 namespace RecipeSite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200820215842_Inital")]
-    partial class Inital
+    [Migration("20200821161727_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

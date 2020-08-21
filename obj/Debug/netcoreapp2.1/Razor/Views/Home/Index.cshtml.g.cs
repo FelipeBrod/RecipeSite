@@ -89,7 +89,7 @@ using RecipeSite.Models.ViewModels;
 ");
             EndContext();
             BeginContext(537, 170, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff31c4618b2641998c126c3afbedc7c6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "976429944485403ea0df6b104e77d2d0", async() => {
                 BeginContext(543, 157, true);
                 WriteLiteral("\n    <div class=\"center\">\n        <h1>Your Site For Recipes!</h1>\n\n        <h3> Share your recipes with us and we will share some with you!</h3>\n\n    </div>\n");
                 EndContext();
