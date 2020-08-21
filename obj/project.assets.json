@@ -12535,11 +12535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite-master\\RecipeSite-master\\RecipeSite.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite\\RecipeSite.csproj",
       "projectName": "RecipeSite",
-      "projectPath": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite-master\\RecipeSite-master\\RecipeSite.csproj",
+      "projectPath": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite\\RecipeSite.csproj",
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite-master\\RecipeSite-master\\obj\\",
+      "outputPath": "C:\\Users\\Felipe\\Documents\\Felipe\\Game\\COMP229\\RecipeSite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

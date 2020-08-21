@@ -1,5 +1,4 @@
-﻿@model RecipeSite.Models.Recipe
-
+﻿@model RecipesListViewModel
 @{
     ViewData["Title"] = "ViewRecipe";
 }
@@ -10,30 +9,30 @@
 
 
         <dd>
-            <h4>How to do:&nbsp; @Model.Name</h4>
+            <h4>How to do:&nbsp; @Model.Recipe.Name</h4>
         </dd>
         
         <dd>What you need:
 
         <dt>
-            @Model.Ingredients
+            @Model.Recipe.Ingredients
         </dt>
         <dd>The original cuisine:
         <dd>
         <dt>
-            @*@Model.Cuisine.Name*@
+            @Model.Cuisine.Name
         </dt>
         <dd>How to do It:
         <dd>
         <dt>
-            @Model.Preparation
+            @Model.Recipe.Preparation
         </dt>
     </dl>
 </div>
 <div>
    
 
-    <a asp-controller="CRUD" asp-action="UpdateRecipe" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-controller="CRUD" asp-action="UpdateRecipe" asp-route-id="@Model.Recipe.Id" class="btn btn-warning">Edit</a>
     
     @*<a asp-controller="Recipes" asp-action="ReviewRecipe" class="btn btn-default">Review It!</a>*@
     <a class="btn btn-default" asp-action="RecipeList">Back to List</a>

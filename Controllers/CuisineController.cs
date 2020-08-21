@@ -12,17 +12,69 @@ namespace RecipeSite.Controllers
     public class CuisineController : Controller
     {
         private readonly IRecipeRepository repository;
+        private readonly ICuisineRepository CuisineRepository;
 
-        public CuisineController(IRecipeRepository repo)
+
+        public CuisineController(IRecipeRepository repo, ICuisineRepository cuRepo)
         {
-             repository = repo;
+            repository = repo;
+            CuisineRepository = cuRepo;
         }
+
+        [HttpPost]
+        public IActionResult AddCuisine(Cuisine cuisine)
+        {
+            var cuisines = CuisineRepository.FindAll();
+            var viewModel = new RecipesListViewModel { Cuisines = cuisines };
+
+           
+
+            if (ModelState.IsValid)
+            {
+
+                if (!CuisineRepository.GetCuisinesByName(cuisine.Name))
+                {
+                    CuisineRepository.SaveCuisine(cuisine);
+                    return RedirectToAction("AddRecipe", "CRUD");
+                }
+            }
+            return View("Views/CRUD/AddRecipe.cshtml", viewModel);
+        }
+
+
+        public IActionResult CuisineList(int id)
+        {
+            var list = new RecipesListViewModel
+            {
+                Recipes = repository.GetRecipes().Where(r => r.CuisineId == id),
+                Cuisine = CuisineRepository.FindById(id)
+            };
+
+            return View(list);
+
+        }
+
+
+
+
+        [HttpPost]
+        public IActionResult DeleteRecipe(int id)
+        {
+            Recipe deletedRecipe = repository.DeleteRecipe(id);
+
+            if (deletedRecipe != null)
+            {
+                TempData["message"] = $"{deletedRecipe.Name} was deleted";
+            }
+            return RedirectToAction("RecipeList", "Recipes");
+        }
+
 
         public ViewResult SearchByCuisine(string search)
         {
             RecipesListViewModel list = new RecipesListViewModel
             {
-                Recipes = repository.FindAllRecipes
+                Recipes = repository.GetRecipes()
                           .Where(p => p.Cuisine.Name.Contains(search))
             };
             if (list.Recipes.Count() == 0)
@@ -35,5 +87,5 @@ namespace RecipeSite.Controllers
 
     }
 
-    
+
 }

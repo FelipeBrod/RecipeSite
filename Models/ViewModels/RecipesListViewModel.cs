@@ -11,9 +11,8 @@ namespace RecipeSite.Models.ViewModels
         
         public IEnumerable<Recipe> Recipes { get; set; }
         public Recipe Recipe { get; set; }
-        public PagingInfo PagingInfo { get; set; }
         public Cuisine Cuisine { get; set; }
-        public ICollection<Cuisine> Cuisines{ get; set; }
+        public IEnumerable<Cuisine> Cuisines{ get; set; }
     }
 }
 

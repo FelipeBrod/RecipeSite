@@ -26,7 +26,8 @@ namespace RecipeSite.Migrations
 
                     b.Property<int>("Index");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

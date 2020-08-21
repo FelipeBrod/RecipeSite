@@ -15,15 +15,12 @@ namespace RecipeSite.Models
         {
             context = ctx;
         }
-
-
-
-        public IQueryable<Cuisine> Cuisines => context.Cuisines;
-
-        public async Task<List<Cuisine>> FindAllAsync()
+        public Cuisine FindById(int id)
         {
-            return await context.Cuisines.OrderBy(x => x.Name).ToListAsync();
+            return context.Cuisines.FirstOrDefault(obj => obj.Id == id);
         }
+
+        public List<Cuisine> FindAll() => context.Cuisines.OrderBy(x => x.Name).ToList();
 
         public void SaveCuisine(Cuisine cuisine)
         {
@@ -47,5 +44,21 @@ namespace RecipeSite.Models
 
         }
 
+        public IQueryable<Cuisine> GetCuisines()
+        {
+            return context.Cuisines;
+        }
+        
+        public bool GetCuisinesByName(string name)
+        {
+
+            Cuisine newCuisine = context.Cuisines.FirstOrDefault(c => c.Name.ToLower() == name.ToLower());
+            if(newCuisine != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

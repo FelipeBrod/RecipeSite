@@ -1,4 +1,4 @@
-﻿@model RecipeSite.Models.ViewModels.RecipesListViewModel
+﻿@model RecipesListViewModel
 
 
 <h4>Recipe</h4>
@@ -7,25 +7,22 @@
 
 <div class="center-div">
     <p>
-        @if (Model != null)
+        @if (Model.Recipe != null)
         {
-            <h1>Edit Your Recipe</h1>
-        }
-        else
-        {
-            <h1>Create Your Recipe</h1>
-        }
+<h1>Edit Your Recipe</h1> }
+else
+{
+<h1>Create Your Recipe</h1>}
 
     </p>
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <form asp-controller="CRUD" asp-action="AddRecipe" method="post">
+    <div class="col-md-6">
+        <form asp-action="AddRecipe" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
-            @if (Model != null)
+            @if (Model.Recipe != null && Model.Recipe.Id != 0)
             {
-                <input type="hidden" asp-for="Recipe.Id" value="@Model" />
-            }
+                    <input type="hidden" asp-for="Recipe.Id" />}
 
             <div class="form-group">
                 <label asp-for="Recipe.Name" class="control-label"></label>
@@ -33,15 +30,9 @@
                 <span asp-validation-for="Recipe.Name" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <Label asp-for="Recipe.CuisineId" class="control-label"></Label>
-                <select asp-for="Recipe.CuisineId" 
-                        asp-items="@(new SelectList(Model.Cuisines,"Name"))" class="form-control">   
-                </select>
-                <span asp-validation-for="Cuisine" class="text-danger"></span>
-            </div>
 
             <div class="form-group">
+                <label asp-for="Recipe.Preparation" class="control-label"></label>
                 <label asp-for="Recipe.Preparation" class="control-label"></label>
                 <input asp-for="Recipe.Preparation" class="form-control" />
                 <span asp-validation-for="Recipe.Preparation" class="text-danger"></span>
@@ -52,24 +43,32 @@
                 <span asp-validation-for="Recipe.Ingredients" class="text-danger"></span>
             </div>
 
-            @if (Model != null)
-            {
-                <button class="btn btn-primary" type="submit">Update</button>
-                <button asp-controller="CRUD" asp-action="DeleteRecipe" method="post" class="btn btn-danger">Delete</button>
-                
-            }
-            else
-            {
-                <button class="btn btn-success" type="submit">Create</button>
-                <a class="btn btn-danger" asp-controller="Home" asp-action="index">Cancel</a>
-            }
-            
-            </form>
-            <div>
-                <a class="btn btn-warning"asp-controller="Recipes" asp-action="RecipeList">To List</a>
+            <div class="form-group">
+                <Label asp-for="Recipe.CuisineId" class="control-label"></Label>
+                <select asp-for="Recipe.CuisineId" asp-items="@(new SelectList(Model.Cuisines,"Id","Name"))" class="form-control">
+                </select>
 
             </div>
-        </div>
+
+
+
+            @if (Model.Recipe != null && Model.Recipe.Id != 0)
+            {
+                <button class="btn btn-primary" type="submit">Update</button>
+                <button asp-controller="CRUD" asp-action="DeleteRecipe" method="post"  value="Delete"  class="btn btn-danger" type="submit">Delete</button> }
+                            else
+                            {
+
+                <button class="btn btn-success" type="submit">Create</button>
+                                <a class="btn btn-danger" asp-controller="Home" asp-action="index">Cancel</a>}
+        <p>
+
+            <div>
+                <a class="btn btn-warning" asp-controller="Recipes" asp-action="RecipeList">To List</a>
+            </div>
+            </p>
+        </form>
     </div>
+</div>
 
 

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using RecipeSite.Models;
 using RecipeSite.Models.ViewModels;
 
@@ -13,39 +12,50 @@ namespace RecipeSite.Controllers
     public class CRUDController : Controller
     {
         private readonly IRecipeRepository repository;
+        private readonly ICuisineRepository CuisineRepository;
 
 
-        public CRUDController(IRecipeRepository repo)
+        public CRUDController(IRecipeRepository repo, ICuisineRepository cuRepo)
         {
             repository = repo;
+            CuisineRepository = cuRepo;
+        }
+
+        
+        public IActionResult AddRecipe()
+        {
+            var cuisines = CuisineRepository.FindAll();
+            var viewModel = new RecipesListViewModel { Cuisines = cuisines };
+            return View(viewModel);
         }
 
         [HttpPost]
-        public ViewResult AddRecipe(Recipe recipe)
+        public IActionResult AddRecipe(Recipe recipe)
         {
-            if (ModelState.IsValid)
-            {
 
-                repository.SaveRecipe(recipe);
-                return View("Success", recipe);
-
-            }
-            else
+            if (!ModelState.IsValid)
             {
-                return View();
+                var cuisines = CuisineRepository.FindAll();
+                var viewModel = new RecipesListViewModel { Recipe = recipe, Cuisines = cuisines };
+                return View(viewModel);
             }
+            
+            repository.SaveRecipe(recipe);
+            return RedirectToAction("RecipeList", "Recipes");
+
         }
 
         [HttpGet]
-        public ViewResult AddRecipe() => View();
-
-        [HttpGet]
-        public ViewResult UpdateRecipe(int id)
+         public IActionResult UpdateRecipe(int id)
         {
-            Recipe recipe = repository.FindAllRecipes.Where(n => n.Id == id).FirstOrDefault();
-           
-            return View("AddRecipe", recipe);
+
+            var obj = repository.FindById(id);
+            List<Cuisine> cuisines = CuisineRepository.FindAll();
+            RecipesListViewModel viewModel = new RecipesListViewModel { Recipe = obj, Cuisines = cuisines};
+            
+            return View("/Views/CRUD/AddRecipe.cshtml", viewModel);
         }
+
 
         [HttpPost]
         public IActionResult DeleteRecipe(int id)

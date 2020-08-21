@@ -1,12 +1,20 @@
-﻿@model RecipeSite.Models.Recipe;
+﻿@model RecipesListViewModel
 
-@{
-    @*ViewData["Title"] = "Create Recipe";*@
-}
+@{ @*ViewData["Title"] = "Create Recipe";*@ }
 
 
 <div class="container">
-
-    <partial name="CreatePartial" />
+    <div class="row justify-content-md-center">
+        <div class="col-xl-8">
+            <partial name="CreatePartial" />
+        </div>
+        @if (Model.Recipe == null)
+        {
+    <div class="col-xl-8">
+        <partial name="PartialCuisine" />
+    </div>
+    }
+                </div>
 
 </div>
+

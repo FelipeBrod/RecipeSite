@@ -10,8 +10,8 @@ using RecipeSite.Models;
 namespace RecipeSite.Migrations.AppIdentityDb
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20200811034711_Initial")]
-    partial class Initial
+    [Migration("20200820215920_identity")]
+    partial class identity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

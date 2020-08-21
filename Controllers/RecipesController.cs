@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using RecipeSite.Models;
 using RecipeSite.Models.ViewModels;
@@ -10,7 +10,7 @@ namespace RecipeSite.Controllers
     {
         private readonly IRecipeRepository _repository;
         private readonly ICuisineRepository _CuisineRepository;
-        public int PageSize = 10;
+        
 
         public RecipesController(IRecipeRepository repo, ICuisineRepository cuisineRepo)
         {
@@ -19,24 +19,16 @@ namespace RecipeSite.Controllers
         }
         public IActionResult RecipeList()
         {
-            var list = _repository.FindAllRecipes;
+            var list = new RecipesListViewModel
+            {
+                Recipes = _repository.GetRecipes().ToList(),
+                Cuisines = _CuisineRepository.FindAll()
+            };
+
             return View(list);
 
         }
 
-        //View(new RecipesListViewModel
-        //{
-        //    Recipes = repository.Recipes
-        //    .OrderBy(p => p.Id)
-        //    .Skip((recipePage - 1) * PageSize)
-        //    .Take(PageSize),
-        //    PagingInfo = new PagingInfo //not working
-        //    {
-        //        CurrentPage = recipePage,
-        //        RecipesPerPage = PageSize,
-        //        TotalRecipes = repository.Recipes.Count()
-        //    }
-        //});
 
 
 
@@ -50,7 +42,14 @@ namespace RecipeSite.Controllers
         [HttpGet]
         public ViewResult ViewRecipe(int id)
         {
-            Recipe recipe = _repository.FindAllRecipes.Where(n => n.Id == id).FirstOrDefault();
+            var getRecipeId = _repository.FindById(id);
+
+            var recipe = new RecipesListViewModel
+            {
+                Recipe = getRecipeId,
+                Cuisine = _CuisineRepository.FindById(getRecipeId.CuisineId)
+            };
+
             return View(recipe);
         }
     }

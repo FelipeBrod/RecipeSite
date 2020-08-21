@@ -8,14 +8,15 @@ namespace RecipeSite.Models
     public interface ICuisineRepository
     {
 
-        IQueryable<Cuisine> Cuisines { get;}
+        IQueryable<Cuisine> GetCuisines(); 
 
         void SaveCuisine(Cuisine cuisine);
 
         Cuisine DeleteCuisine(int id);
+        List<Cuisine> FindAll();
 
+        Cuisine FindById(int id);
 
-
-
+        bool GetCuisinesByName(string name);
     }
 }

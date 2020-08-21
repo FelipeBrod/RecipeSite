@@ -9,8 +9,8 @@ using RecipeSite.Models;
 namespace RecipeSite.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200804201214_Initial")]
-    partial class Initial
+    [Migration("20200820215842_Inital")]
+    partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,13 +20,29 @@ namespace RecipeSite.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("RecipeSite.Models.Cuisine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Index");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cuisines");
+                });
+
             modelBuilder.Entity("RecipeSite.Models.Recipe", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Cuisine");
+                    b.Property<int>("CuisineId");
 
                     b.Property<string>("Ingredients")
                         .IsRequired();
@@ -39,7 +55,17 @@ namespace RecipeSite.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CuisineId");
+
                     b.ToTable("Recipes");
+                });
+
+            modelBuilder.Entity("RecipeSite.Models.Recipe", b =>
+                {
+                    b.HasOne("RecipeSite.Models.Cuisine", "Cuisine")
+                        .WithMany("Recipes")
+                        .HasForeignKey("CuisineId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

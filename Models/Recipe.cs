@@ -14,9 +14,9 @@ namespace RecipeSite.Models
         [Required(ErrorMessage = "Please enter the recipe name")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Please enter the cuisine")]
         public Cuisine Cuisine { get; set; }
 
+        [Required(ErrorMessage = "Please enter the cuisine")]
         public int CuisineId {get; set; } 
 
         [Required(ErrorMessage = "Please enter the Instructions")]

@@ -11,8 +11,9 @@ namespace RecipeSite.Models
         
         public int Index { get; set; }
         public int Id { get; set; }
-        public string Name { get; set; }
-        
+
+        [Required(ErrorMessage = "Please enter a cuisine name")]
+        public string Name { get; set; }    
         public ICollection<Recipe> Recipes { get; set; } = new List<Recipe>();
 
         public Cuisine()

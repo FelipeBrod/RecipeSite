@@ -1,0 +1,43 @@
+﻿@model RecipesListViewModel
+
+
+<h3>Recipes in @Model.Cuisine.Name cuisine</h3>
+
+<table class="table table-striped table-hover">
+    <tr class="success">
+
+        <th>
+            Recipe Name:
+        </th>
+
+        <th>
+            More details:
+        </th>
+        <th>
+            Edit it:
+        </th>
+
+
+<tbody>
+
+        @{ foreach (var r in Model.Recipes)
+            {
+            <tr>
+                <td>
+                    <h3><a asp-controller="Recipes" asp-action="ViewRecipe" asp-route-id="@r.Id" class="btn btn-link">@r.Name</a></h3>
+                </td>
+                <td>
+                    <h3><a asp-controller="Recipes" asp-action="ViewRecipe" asp-route-id="@r.Id" class="btn btn-success">Details about this recipe</a></h3>
+                </td>
+                <td>
+                <a asp-controller="CRUD" asp-action="UpdateRecipe" asp-route-id="@r.Id" class="btn btn-warning">Edit this recipe</a>
+                <td>
+                
+            </tr> } }
+    </tbody>
+
+    
+
+</table>
+<a asp-controller="CRUD" asp-action="AddRecipe" class="btn btn-success">Create a New Recipe</a>
+<a class="btn btn-warning" asp-controller="Recipes" asp-action="RecipeList">Back to List</a>

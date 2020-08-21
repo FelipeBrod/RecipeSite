@@ -1,4 +1,4 @@
-﻿@model IEnumerable<RecipeSite.Models.Recipe>
+﻿@model RecipesListViewModel
 
 <p>
     <a asp-controller="CRUD" asp-action="AddRecipe" class="btn btn-success">Create New</a>
@@ -11,34 +11,30 @@
             Name
         </th>
         <th>
-            Cuisine
+           
         </th>
         <th>
-
+            Cuisine
         </th>
 
 
     <tbody>
 
-        @{ foreach (var item in Model)
-                        {
-            <tr>
-
-                <td>
-                 @item.Name
-                </td>
-                <td>
-                    @item.CuisineId
-                </td>
-                <td>
-                    <a asp-controller="Recipes" asp-action="ViewRecipe" asp-route-id="@item.Id" class="btn btn-info">Details</a>
-                </td>
-            </tr> } }
+        @{ foreach (var item in Model.Recipes)
+            {
+<tr>
+    <td>
+        <h3><a asp-controller="Recipes" asp-action="ViewRecipe" asp-route-id="@item.Id" class="btn btn-link">@item.Name</a></h3>
+    </td>
+    <td>
+        <h3><a asp-controller="Recipes" asp-action="ViewRecipe" asp-route-id="@item.Id" class="btn btn-success">Details</a></h3>
+    </td>
+    <td>
+        <a asp-controller="Cuisine" asp-action="CuisineList" asp-route-id="@item.Cuisine.Id" class="btn btn-default">@item.Cuisine.Name</a>
+    </td>
+</tr> } }
 
     </tbody>
 
 
-</table>
-
-@*<div page-model="@Model.PagingInfo" page-action="RecipeList"></div>*@
-
+</table> @*<div page-model="@Model.PagingInfo" page-action="RecipeList"></div>*@
